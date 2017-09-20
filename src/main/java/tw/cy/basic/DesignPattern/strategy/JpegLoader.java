@@ -1,10 +1,9 @@
 package tw.cy.basic.DesignPattern.strategy;
 
-public class JpegLoader extends ImageLoader {
+public class JpegLoader implements ImageLoadable {
 
-    @Override
     public Object load(String filePath) {
         return "JPEG loaded";
     }
-    
+
 }

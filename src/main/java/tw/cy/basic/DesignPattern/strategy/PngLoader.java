@@ -1,8 +1,7 @@
 package tw.cy.basic.DesignPattern.strategy;
 
-public class PngLoader extends ImageLoader {
+public class PngLoader implements ImageLoadable {
 
-    @Override
     public Object load(String filePath) {
         return "PNG loaded";
     }
