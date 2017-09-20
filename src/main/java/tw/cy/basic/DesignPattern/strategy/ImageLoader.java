@@ -2,7 +2,7 @@ package tw.cy.basic.DesignPattern.strategy;
 
 public class ImageLoader {
 
-    public static enum ImageType { GIF, JPEG, PNG }
+    public static enum ImageType { GIF, JPEG, PNG, ICO }
     
     public Object load(String filePath, ImageType type) {
         switch (type) {
@@ -12,10 +12,17 @@ public class ImageLoader {
             return loadJpeg(filePath);
         case PNG:
             return loadPng(filePath);
+        case ICO:
+            return loadIco(filePath);
         default:
             throw new RuntimeException("Unknow ImageType" + type);
         }
     }
+    
+    private String loadIco(String filePath) {
+        return "ICO loaded";
+    }
+    
     
     private String loadGif(String filePath) {
         return "GIF loaded";

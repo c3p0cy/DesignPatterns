@@ -14,5 +14,6 @@ public class ImageLoaderTest {
     assertEquals(loader.load(null, ImageType.GIF), "GIF loaded");
     assertEquals(loader.load(null, ImageType.JPEG), "JPEG loaded");
     assertEquals(loader.load(null, ImageType.PNG), "PNG loaded");
+    assertEquals(loader.load(null, ImageType.ICO), "ICO loaded");
   }
 }
