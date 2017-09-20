@@ -1,12 +1,19 @@
 package tw.cy.basic.DesignPattern.strategy;
 
+import lombok.Setter;
+
 public class ImageLoader {
 
     public static enum ImageType {
         GIF, JPEG, PNG, ICO;
     }
 
-    ImageLoadable loader;
+    @Setter
+    private ImageLoadable loader;
+    
+    public Object load(String filePath) {
+        return loader.load(filePath);
+    }
 
     public Object load(String filePath, ImageType type)
             throws InstantiationException, IllegalAccessException, ClassNotFoundException {
