@@ -4,8 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-import static tw.cy.basic.DesignPattern.strategy.ImageLoader.ImageType;
-
 public class JpegLoaderTest {
 
     @Test
